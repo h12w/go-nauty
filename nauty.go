@@ -5,7 +5,7 @@
 package nauty
 
 /*
-#include <nauty.h>
+#include <nauty/nauty.h>
 #cgo LDFLAGS: -lnauty
 
 void setDefault(optionblk* o) {
@@ -113,15 +113,15 @@ type Option struct {
 	Linelength   int  // max chars/line (excl. '\n') for output
 	/*
 		Outfile      string // file for output, if any
-		void (*userrefproc)       // replacement for usual refine procedure 
+		void (*userrefproc)       // replacement for usual refine procedure
 		     (graph*,int*,int*,int,int*,permutation*,set*,int*,int,int);
-		void (*userautomproc)     // procedure called for each automorphism 
+		void (*userautomproc)     // procedure called for each automorphism
 		     (int,permutation*,int*,int,int,int);
-		void (*userlevelproc)     // procedure called for each level 
+		void (*userlevelproc)     // procedure called for each level
 		     (int*,int*,int,int*,statsblk*,int,int,int,int,int,int);
-		void (*usernodeproc)      // procedure called for each node 
+		void (*usernodeproc)      // procedure called for each node
 		     (graph*,int*,int*,int,int,int,int,int,int);
-		void (*invarproc)         // procedure to compute vertex-invariant 
+		void (*invarproc)         // procedure to compute vertex-invariant
 		     (graph*,int*,int*,int,int,int,permutation*,int,boolean,int,int);
 	*/
 	TcLevel       int // max level for smart target cell choosing
@@ -219,4 +219,3 @@ func Nauty(
 	}
 	return
 }
-
